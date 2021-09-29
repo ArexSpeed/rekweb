@@ -1,0 +1,50 @@
+@import "Variables";
+.aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    &-triangle {
+      width: 0; 
+      height: 0; 
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid $white;
+    }
+    & h2 {
+      padding-left: 8px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid $white;
+    &:last-child {
+      border: none;
+    }
+    &-category {
+      color: $graywhite;
+      font-size: 12px;
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+    }
+    &-title {
+      margin: 0;
+      padding: 4px 0;
+      cursor: pointer;
+    }
+  }
+}

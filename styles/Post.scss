@@ -1,0 +1,104 @@
+.post {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 8px 0;
+  border-top: 1px solid gray;
+  &.first {
+    flex-direction: column;
+    border: none;
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+    }
+  }
+  &__image {
+    width: 30%;
+    &.first {
+      width: 100%;
+      @media screen and (min-width: $desktop) {
+        width: 30%;
+      }
+    }
+    &-item {
+      max-width: 100%;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 8px;
+    width: 70%;
+    &.first {
+      width: 100%;
+      @media screen and (min-width: $desktop) {
+        width: 70%;
+      }
+    }
+    &-date {
+      color: $gray;
+      font-weight: 300;
+      margin: 0;
+      padding: 4px 0;
+    }
+    &-title {
+      font-size: 20px;
+      font-weight: 500;
+      margin: 0;
+      padding: 4px 0;
+      cursor: pointer;
+      &:hover {
+        color: $red;
+      }
+    }
+    &-description {
+      display: none;
+      font-weight: 300;
+      margin: 0;
+      padding: 4px 0;
+      @media screen and (min-width: $tablet) {
+        display: inline;
+      }
+    }
+  }
+}
+
+.postSite {
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    padding: 4px 0;
+  }
+  &__description {
+    font-weight: 300;
+    margin: 0;
+    padding: 4px 0;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 4px 8px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    &-icon {
+      width: 16px;
+      height: 16px;
+      color: $black;
+    }
+    & span {
+      font-size: 16px;
+    }
+  }
+}

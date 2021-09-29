@@ -1,0 +1,139 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: $dark;
+  color: $white;
+  &__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 8px;
+    width: 100%;
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @media screen and (min-width: $tablet) {
+      justify-content: flex-start;
+      padding: 8px;
+    }
+    &-text {
+      font-size: 24px;
+      padding: 0 8px;
+      border-right: 1px solid $graywhite;
+    }
+    &-copy {
+      font-size: 12px;
+      padding: 0 8px;
+    }
+  }
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    @media screen and (min-width: $tablet) {
+      padding: 0 8px;
+    }
+    @media screen and (min-width: $desktop) {
+      justify-content: flex-end;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 50%;
+      margin: 0;
+      padding: 0;
+      @media screen and (min-width: $tablet) {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: auto;
+      }
+    }
+    &-item {
+      list-style: none;
+      padding: 4px;
+      cursor: pointer;
+      text-align: left;
+      width: 100%;
+      &:hover{
+        color: $graywhite;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    background: $gray;
+    &-social {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 8px;
+      &-icon {
+        color: $white;
+        cursor: pointer;
+        padding: 0 4px 0 0;
+        &.twitter {
+          &:hover {
+            color: #00ACEE;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+        &.fb {
+          &:hover {
+            color: #3B5998;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+      &-name {
+        display: none;
+        @media screen and (min-width: $tablet) {
+          display: inline;
+          padding: 0 4px;
+        }
+      }
+    }
+    &-policy {
+      padding: 0 8px;
+      color: $graywhite;
+      font-size: 12px;
+      & ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        & li {
+          list-style: none;
+          padding: 0 4px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
